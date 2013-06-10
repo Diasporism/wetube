@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'rspec-rails'
+gem 'faye'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
