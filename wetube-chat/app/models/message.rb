@@ -6,4 +6,8 @@ class Message < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :conversation
+
+  def as_json(options={})
+    super(only: [:content, :user_id])
+  end
 end
