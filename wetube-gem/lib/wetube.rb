@@ -2,19 +2,14 @@ require "wetube/version"
 require "json"
 require "hashie"
 require "rest-client"
+require "wetube/conversation"
 
 module Wetube
   BASE_URL = "http://localhost:3000"
 
-  class Service
-    def self.get(id)
-      "#{BASE_URL}/conversations/#{id}"
-    end
-  end
-
-  class Conversation
-    def self.fetch_conversation(id)
-      RestClient.get(Service.get(id))
+  class Server
+    def self.get_resource(url)
+      RestClient.get url
     end
   end
 end
