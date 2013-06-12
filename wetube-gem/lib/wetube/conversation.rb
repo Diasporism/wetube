@@ -1,5 +1,6 @@
 module Wetube
   class Conversation
+
     def self.url(id)
       "#{BASE_URL}/conversations/#{id}.json"
     end
@@ -15,13 +16,7 @@ module Wetube
     end
 
     def self.assign_params_from_json(data)
-      conversation = Hashie::Mash.new
-
-      conversation.id         = data['id'].to_i
-      conversation.created_at = data['created_at']
-      # conversation.messages = do something with data['messages']
-
-      conversation
+      Hashie::Mash.new(data)
     end
   end
 end
