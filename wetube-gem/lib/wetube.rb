@@ -1,9 +1,9 @@
-require "wetube_gem/version"
+require "wetube/version"
 require "json"
 require "hashie"
 require "rest-client"
 
-module WetubeGem
+module Wetube
   BASE_URL = "http://localhost:3000"
 
   class Service
