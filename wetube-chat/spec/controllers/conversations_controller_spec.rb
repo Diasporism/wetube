@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ConversationsController do
-  describe "conversation#show" do
+  describe "GET show" do
     let(:conversation) do
       Conversation.create
     end

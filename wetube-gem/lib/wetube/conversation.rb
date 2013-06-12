@@ -1,12 +1,20 @@
 module Wetube
   class Conversation
-
-    def self.url(id)
+    def self.find_url(id)
       "#{BASE_URL}/conversations/#{id}.json"
     end
 
+    def self.create_url(conversation_id)
+      "#{BASE_URL}/conversations/#{conversation_id}/messages.json"
+    end
+
     def self.find(id)
-      response = Server.get_resource url(id)
+      response = Server.get_resource find_url(id)
+      handle_json response
+    end
+
+    def self.create_message(conversation_id, params)
+      response = Server.post_resource(create_url(conversation_id), {message: params})
       handle_json response
     end
 
