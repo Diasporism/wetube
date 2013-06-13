@@ -1,3 +1,4 @@
 WetubePlaylist::Application.routes.draw do
-  resources :videos, only: [:create]  
+  resources :videos, only: [:create]
+  resources :playlists, only: [:show]
 end

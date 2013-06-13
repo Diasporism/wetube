@@ -12,4 +12,8 @@ class Video < ActiveRecord::Base
     playlist = Playlist.find(playlist_id)
     playlist.videos << self
   end
+
+  def as_json(options={})
+    super(except: [:created_at, :updated_at])
+  end
 end

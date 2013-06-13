@@ -3,10 +3,9 @@ require "json"
 require "hashie"
 require "rest-client"
 require "wetube/conversation"
+require "wetube/playlist"
 
 module Wetube
-  BASE_URL = "http://localhost:3000" 
-
   class Server
     def self.get_resource(url)
       RestClient.get url
