@@ -12,14 +12,43 @@
 
 <div id="playlist">
   <div id='playlists-container'>
-    <% 100.times do %>
-        <div class='playlist-item'></div>
-    <% end %>
+    <!-- playlist items are appended here from handlebar template -->
+  </div>
+  <div id='playlist-input'>
+    <textarea id='playlist-text-area' rows="3"></textarea>
+    <div id='playlist-submit-button'></div>
   </div>
 </div>
 <div id="video">
 <iframe id="ytplayer" type="text/html"
-  src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+  src="http://www.youtube.com/embed/2bu-yysgr2M?autoplay=1&origin=http://example.com"
   frameborder="0"/>
 </div>
 <div id="controls"></div>
+
+<script id="playlist-item-template" type="text/x-handlebars-template">
+  <div class='playlist-item'>
+    <%= {{url}}, {{url}} %>
+  </div>
+</script>
+
+<script type="text/javascript">
+  $(function() {
+
+    PlaylistItem = {
+      url: "#",
+      post: function(val) {
+        console.log(val)
+        postItems({ url: this.url,
+          destination: $("#playlists-container"),
+          template: $("#playlist-item-template") });
+      }
+    };
+
+    $('#playlist-submit-button').on('click', function(eventObject){
+      console.log($('#playlist-text-area').val());
+      var val = $('#playlist-text-area').val());
+      PlaylistItem.post(val);
+    });
+  });
+</script>
