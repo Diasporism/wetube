@@ -1,0 +1,1486 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-10 15:16:15 -0600
+Served asset /rails.png - 200 OK (5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:16:29 -0600
+Processing by MessagesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant MessagesController::Message):
+  app/controllers/messages_controller.rb:3:in `index'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:16:50 -0600
+Processing by MessagesController#index as HTML
+  Rendered messages/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x007fbace07bd50>:0x007fbace07ac20>):
+    1: <% title 'Chat' %>
+    2: 
+    3: <ul id='chat'>
+    4:   <%= render @messages %>
+  app/views/messages/index.html.erb:1:in `_app_views_messages_index_html_erb___3616846422036717446_70220148623420'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:17:45 -0600
+Processing by MessagesController#index as HTML
+  Rendered messages/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Message):
+    4:   
+    5: </ul>
+    6: 
+    7: <%= form_for Message.new, remote: true do |f| %>
+    8:   <%= f.text_field :content %>
+    9:   <%= f.submit 'Send' %>
+    10: <% end %>
+  app/views/messages/index.html.erb:7:in `_app_views_messages_index_html_erb___3616846422036717446_70220149347880'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMessagesTable (20130610212052)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610212052')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMessagesTable (20130610212052)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610212052')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:24:55 -0600
+Processing by MessagesController#index as HTML
+  Rendered messages/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    1: <%= 'Chat' %>
+    2: 
+    3: <ul id='chat'>
+    4:   <%= render @messages %>
+    5: </ul>
+    6: 
+    7: <%= form_for Message.new, remote: true do |f| %>
+  app/views/messages/index.html.erb:4:in `_app_views_messages_index_html_erb__4267537165528099335_70328175103620'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:25:31 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered collection (0.0ms)
+  Rendered messages/index.html.erb within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined method `messages_path' for #<#<Class:0x007fed1d0abb28>:0x007fed1d0aae30>):
+    4:   <%= render @messages %>
+    5: </ul>
+    6: 
+    7: <%= form_for Message.new, remote: true do |f| %>
+    8:   <%= f.text_field :content %>
+    9:   <%= f.submit 'Send' %>
+    10: <% end %>
+  app/views/messages/index.html.erb:7:in `_app_views_messages_index_html_erb__4267537165528099335_70328175103620'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:25:58 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered collection (0.0ms)
+  Rendered messages/index.html.erb within layouts/application (9.3ms)
+Compiled application.css  (0ms)  (pid 7593)
+Compiled jquery.js  (3ms)  (pid 7593)
+Compiled jquery_ujs.js  (1ms)  (pid 7593)
+Compiled create_message.js  (0ms)  (pid 7593)
+Compiled application.js  (44ms)  (pid 7593)
+Completed 200 OK in 94ms (Views: 79.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:25:59 -0600
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:25:59 -0600
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:25:59 -0600
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:25:59 -0600
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/create_message.js?body=1" for 127.0.0.1 at 2013-06-10 15:25:59 -0600
+Served asset /create_message.js - 200 OK (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:26:07 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.8ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 21:26:07 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:26:07 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 14ms
+
+ActionView::MissingTemplate (Missing template messages/create, application/create with {:locale=>[:en], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", :html, :text, :js, :css, :ics, :csv, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/Logan/gSchool/wetube/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__697626309347116447__process_action__1740998430795161558__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4205843107781291975__call__652394835410231280__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:26:09 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 21:26:09 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:26:09 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template messages/create, application/create with {:locale=>[:en], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", :html, :text, :js, :css, :ics, :csv, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/Logan/gSchool/wetube/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__697626309347116447__process_action__1740998430795161558__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4205843107781291975__call__652394835410231280__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:26:38 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x007fdeaa2cdcc0>:0x007fdeaa50f808>):
+    1: <%= title 'Chat' %>
+    2: 
+    3: <ul id='chat'>
+    4:   <%= render @messages %>
+  app/views/messages/index.html.erb:1:in `_app_views_messages_index_html_erb__1881110005038413122_70297158448160'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:27:12 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered messages/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    4:   <%= render @messages %>
+    5: </ul>
+    6: 
+    7: <%= form_for @message, remote: true do |f| %>
+    8:   <%= f.text_field :content %>
+    9:   <%= f.submit 'Send' %>
+    10: <% end %>
+  app/views/messages/index.html.erb:7:in `_app_views_messages_index_html_erb__1881110005038413122_70297154140280'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:27:21 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (0.6ms)
+  Rendered messages/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `message_message_path' for #<#<Class:0x007fdeaa2cdcc0>:0x007fdeaa25c7c8>):
+    4:   <%= render @messages %>
+    5: </ul>
+    6: 
+    7: <%= form_for @messages, remote: true do |f| %>
+    8:   <%= f.text_field :content %>
+    9:   <%= f.submit 'Send' %>
+    10: <% end %>
+  app/views/messages/index.html.erb:7:in `_app_views_messages_index_html_erb__1881110005038413122_70297157072300'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (0.6ms)
+  Rendered messages/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/create_message.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Served asset /create_message.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:27:29 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsa"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "dsa"], ["created_at", Mon, 10 Jun 2013 21:27:29 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:27:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template messages/create, application/create with {:locale=>[:en], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", :html, :text, :js, :css, :ics, :csv, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/Logan/gSchool/wetube/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__697626309347116447__process_action__1740998430795161558__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4205843107781291975__call__652394835410231280__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Logan/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered messages/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/create_message.js?body=1" for 127.0.0.1 at 2013-06-10 15:27:30 -0600
+Served asset /create_message.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:28:14 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (1.3ms)
+  Rendered messages/index.html.erb within layouts/application (7.1ms)
+Compiled application.js  (3ms)  (pid 7620)
+Completed 200 OK in 69ms (Views: 51.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:28:14 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:14 -0600
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:14 -0600
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:14 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:28:21 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:28:22 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:28:22 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:28:23 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 21:28:23 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:28:23 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered messages/create.js.erb (4.3ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:28:25 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsa"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "dsa"], ["created_at", Mon, 10 Jun 2013 21:28:25 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:28:25 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:28:59 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"12312dqds"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "12312dqds"], ["created_at", Mon, 10 Jun 2013 21:28:59 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:28:59 UTC +00:00]]
+  [1m[36m (101.9ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (1.9ms)
+Completed 200 OK in 108ms (Views: 4.6ms | ActiveRecord: 102.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:29:08 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (1.4ms)
+  Rendered messages/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:29:08 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:08 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:08 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:08 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:29:11 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsasd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "dsasd"], ["created_at", Mon, 10 Jun 2013 21:29:11 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:29:11 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.2ms)
+  Rendered messages/create.js.erb (2.6ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:29:13 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (1.0ms)
+  Rendered messages/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:13 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:13 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:29:13 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:29:13 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:39:15 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.0ms)
+  Rendered messages/index.html.erb within layouts/application (7.6ms)
+Compiled application.js  (3ms)  (pid 7814)
+Completed 200 OK in 73ms (Views: 32.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:39:15 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:39:15 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:39:15 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:39:15 -0600
+Served asset /application.js - 200 OK (5ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:43:15 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 21:43:15 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:43:15 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/create.js.erb (3.3ms)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 3.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:51:23 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.1ms)
+  Rendered messages/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 63ms (Views: 44.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:51:23 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:23 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:23 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:51:29 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 21:51:29 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:51:29 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/create.js.erb (3.3ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:51:41 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (0.9ms)
+  Rendered messages/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:51:41 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:41 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:41 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:51:41 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 15:51:44 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"sssss"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "sssss"], ["created_at", Mon, 10 Jun 2013 21:51:44 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 21:51:44 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (1.9ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 3.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 15:57:43 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.9ms)
+  Rendered messages/index.html.erb within layouts/application (11.6ms)
+Compiled application.js  (2ms)  (pid 8052)
+Completed 200 OK in 86ms (Views: 67.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 15:57:43 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 15:57:43 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 15:57:43 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:57:43 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 15:57:53 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:30:43 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (3.1ms)
+  Rendered messages/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 79ms (Views: 55.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:30:43 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:43 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:43 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:43 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:30:44 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsa"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "dsa"], ["created_at", Mon, 10 Jun 2013 22:30:44 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:30:44 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/create.js.erb (4.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `match' for #<URI::HTTP:0x007f8094a66cd0 URL:http://localhost:9292/faye>):
+    1: <% broadcast "/messages/new" do %>
+    2:     $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb__663212704703406011_70095113189400'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:30:46 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsa"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "dsa"], ["created_at", Mon, 10 Jun 2013 22:30:46 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:30:46 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (2.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `match' for #<URI::HTTP:0x007f8097329cd0 URL:http://localhost:9292/faye>):
+    1: <% broadcast "/messages/new" do %>
+    2:     $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb__663212704703406011_70095113189400'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:30:49 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (1.4ms)
+  Rendered messages/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:30:49 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:49 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:30:49 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:31:00 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"dsa"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "dsa"], ["created_at", Mon, 10 Jun 2013 22:31:00 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:31:00 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (1.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `match' for #<URI::HTTP:0x007f80949b7230 URL:http://localhost:9292/faye>):
+    1: <% broadcast "/messages/new" do %>
+    2:     $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb__663212704703406011_70095113189400'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:31:40 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.6ms)
+  Rendered messages/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 69ms (Views: 50.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:31:40 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:31:40 -0600
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:31:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:31:40 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:31:43 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"123"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "123"], ["created_at", Mon, 10 Jun 2013 22:31:43 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:31:43 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.8ms)
+  Rendered messages/create.js.erb (11.3ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `post_form' for RestClient:Module):
+    1: <% broadcast "/messages/new" do %>
+    2:     $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb__1125130222408144880_70347790531700'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:33:49 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.6ms)
+  Rendered messages/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 69ms (Views: 50.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:33:49 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:49 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:49 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:33:53 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"321"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "321"], ["created_at", Mon, 10 Jun 2013 22:33:53 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:33:53 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/create.js.erb (3.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `post_form' for RestClient:Module):
+    1: <% broadcast "/messages/new" do %>
+    2:     $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb___4356346401880236142_70244306478220'
+
+
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Logan/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (1.9ms)
+  Rendered messages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT "messages".* FROM "messages" 
+  Rendered messages/_message.html.erb (2.6ms)
+  Rendered messages/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:33:56 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:35:58 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.5ms)
+  Rendered messages/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 66ms (Views: 25.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:35:58 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:35:58 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:35:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:35:58 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:36:03 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"something"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "something"], ["created_at", Mon, 10 Jun 2013 22:36:03 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:36:03 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.7ms)
+  Rendered messages/create.js.erb (7.8ms)
+Completed 200 OK in 43ms (Views: 11.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:36:33 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (1.9ms)
+  Rendered messages/index.html.erb within layouts/application (3.8ms)
+Compiled application.js  (2ms)  (pid 8251)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:36:33 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:33 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:33 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:33 -0600
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:36:35 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"something else"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "something else"], ["created_at", Mon, 10 Jun 2013 22:36:35 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:36:35 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.3ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:36:39 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (1.7ms)
+  Rendered messages/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:36:39 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:39 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:39 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:36:39 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:36:42 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"shit"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "shit"], ["created_at", Mon, 10 Jun 2013 22:36:42 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:36:42 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.5ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:37:29 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"so coool"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "so coool"], ["created_at", Mon, 10 Jun 2013 22:37:29 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:37:29 UTC +00:00]]
+  [1m[36m (102.3ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.2ms)
+  Rendered messages/create.js.erb (3.7ms)
+Completed 200 OK in 113ms (Views: 8.2ms | ActiveRecord: 103.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 16:43:35 -0600
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" [0m
+  Rendered messages/_message.html.erb (2.9ms)
+  Rendered messages/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 68ms (Views: 26.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 16:43:35 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 16:43:35 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 16:43:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 16:43:35 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:37 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:37 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:37 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.4ms)
+  Rendered messages/create.js.erb (6.9ms)
+Completed 200 OK in 42ms (Views: 10.5ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:38 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:38 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:38 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.0ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:38 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:38 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:38 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:38 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:39 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (2.8ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:39 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:39 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:39 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"sda"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "sda"], ["created_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:39 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:40 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"sda"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "sda"], ["created_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:40 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"sd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "sd"], ["created_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.4ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:40 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"sd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "sd"], ["created_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:40 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:40 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.0ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:41 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.0ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:41 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:41 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:41 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:41 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2013-06-10 16:43:42 -0600
+Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9dE6HTPhAhBrTCkaO6nXoY/Pk1/xrHdeh4WLjpXxM18=", "message"=>{"content"=>"asd"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "asd"], ["created_at", Mon, 10 Jun 2013 22:43:42 UTC +00:00], ["updated_at", Mon, 10 Jun 2013 22:43:42 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  Rendered messages/_message.html.erb (0.1ms)
+  Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 2.9ms)
