@@ -6,11 +6,11 @@ require 'wetube/version'
 Gem::Specification.new do |gem|
   gem.name          = "wetube"
   gem.version       = Wetube::VERSION
-  gem.authors       = ["Geoff Schorkopf"]
+  gem.authors       = ["Paul Blackwell", "Logan Sears", "Geoff Schorkopf", "Kyle Suss"]
   gem.email         = ["gschorkopf@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{The WeTube gem was constructed to communicate with various API services in the gSchool service-oriented design project.}
+  gem.summary       = %q{Simultaneous video watching! At your fingertips! Order today!}
+  gem.homepage      = "http://www.github.com/diasporism/wetube"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
