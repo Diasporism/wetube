@@ -37,8 +37,7 @@ html, body {
   display: block;
   height: 10%;
   bottom: 0;
-  border-style: solid;
-  border-width: 1px;
+      border-width: 1px;
   background-color: purple;
 }
 
@@ -91,6 +90,27 @@ html, body {
   box-sizing: border-box;
 }
 
+#playlists-container {
+  position: relative;
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  background-color: orange;
+  overflow-y: scroll;
+}
+
+.playlist-item {
+  position: relative;
+  display: block;
+  height: 10%;
+  bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  background-color: orange;
+}
+
 // CSS for video player below:
 
 #video {
@@ -106,6 +126,12 @@ html, body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#ytplayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 // CSS for video controls/nav below:

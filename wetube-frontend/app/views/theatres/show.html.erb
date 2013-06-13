@@ -9,6 +9,17 @@
     <div id='message-submit-button'></div>
   </div>
 </div>
-<div id="playlist"></div>
-<div id="video"></div>
+
+<div id="playlist">
+  <div id='playlists-container'>
+    <% 100.times do %>
+        <div class='playlist-item'></div>
+    <% end %>
+  </div>
+</div>
+<div id="video">
+<iframe id="ytplayer" type="text/html"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+  frameborder="0"/>
+</div>
 <div id="controls"></div>
