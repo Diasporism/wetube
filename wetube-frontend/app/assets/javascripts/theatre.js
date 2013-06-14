@@ -24,11 +24,10 @@ $(function() {
     var url = options.url;
     var destination = options.destination;
     var template = options.template;
+    var value = options.value
+    console.log(value);
 
-    destination.html("Loading your big set of data ****");
-
-    $.getJSON( url, {}, function(data, textStatus, jqXHR) {
-      destination.html("");
+    s
 
       jQuery.each(data,function(index, element) {
         var source = template.html();
