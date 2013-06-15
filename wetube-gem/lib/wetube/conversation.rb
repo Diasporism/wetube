@@ -1,16 +1,15 @@
 module Wetube
   class Conversation
-
-    def self.conversation_url
+    def self.base_url
       "http://localhost:3000"
     end
 
     def self.find_url(id)
-      "#{conversation_url}/conversations/#{id}.json"
+      "#{base_url}/conversations/#{id}.json"
     end
 
     def self.create_url(conversation_id)
-      "#{conversation_url}/conversations/#{conversation_id}/messages.json"
+      "#{base_url}/conversations/#{conversation_id}/messages.json"
     end
 
     def self.find(id)
