@@ -4,6 +4,7 @@ require "hashie"
 require "rest-client"
 require "wetube/conversation"
 require "wetube/playlist"
+require "wetube/theater"
 
 module Wetube
   class Server

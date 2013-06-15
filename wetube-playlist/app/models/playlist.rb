@@ -9,4 +9,6 @@ class Playlist < ActiveRecord::Base
       videos: videos
     }
   end
+
+  
 end

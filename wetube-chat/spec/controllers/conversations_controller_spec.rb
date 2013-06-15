@@ -20,4 +20,11 @@ describe ConversationsController do
     end
   end
 
+  describe "POST create" do
+    it "creates a new conversation" do
+      expect{
+        post :create, format: :json
+      }.to change(Conversation, :count).by(1)
+    end
+  end
 end
