@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/Diasporism/wetube.png)](https://codeclimate.com/github/Diasporism/wetube)
+
 wetube
 ======
 
