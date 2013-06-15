@@ -1,16 +1,15 @@
 module Wetube
-  class Conversation
-
-    def self.conversation_url
-      "http://localhost:3000"
+  class Playlist
+    def self.playlist_url
+      "http://localhost:3001"
     end
 
     def self.find_url(id)
-      "#{conversation_url}/conversations/#{id}.json"
+      "#{playlist_url}/playlists/#{id}.json"
     end
 
-    def self.create_url(conversation_id)
-      "#{conversation_url}/conversations/#{conversation_id}/messages.json"
+    def self.create_url
+      "#{playlist_url}/videos.json"
     end
 
     def self.find(id)
@@ -18,8 +17,8 @@ module Wetube
       handle_json response
     end
 
-    def self.create_message(conversation_id, params)
-      response = Server.post_resource(create_url(conversation_id), {message: params})
+    def self.find_or_create_video(playlist_id, params)
+      response = Server.post_resource(create_url, {video: params, playlist_id: playlist_id})
       handle_json response
     end
 
