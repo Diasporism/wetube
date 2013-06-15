@@ -246,3 +246,521 @@ Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms)
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
   [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 94ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "Something"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "Something else"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something_else"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos" 
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:24:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"  ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = ' ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "playlists" 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (21.8ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "Something"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "Something else"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something_else"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mPlaylist Load (0.1ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+Completed 200 OK in 39ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "videos" 
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"  ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = ' ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:02 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["duration", nil], ["title", "Something"], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["duration", nil], ["title", "Something else"], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something_else"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["video_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists" [0m
+Processing by PlaylistsController#create as JSON
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:31 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.1ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"  ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = ' ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos" 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:32 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 56ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "Something"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "Something else"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/something_else"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlaylistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists" [0m
+Processing by PlaylistsController#create as JSON
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+Completed 201 Created in 17ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "playlists" 
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "Some title"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "playlist_videos" ON "videos"."id" = "playlist_videos"."video_id" WHERE "playlist_videos"."playlist_id" = 1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.1ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "duration", "title", "updated_at", "uploaded_at", "uploader", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["duration", nil], ["title", "J Beebs"], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["uploaded_at", nil], ["uploader", nil], ["url", "http://www.youtube.com/watch?v=Ys7-6_t7OEQ"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPlaylist Load (0.0ms)[0m  [1mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "videos" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "videos" 
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"http://www.youtube.com/watch?v=Ys7-6_t7OEQ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."url" = 'http://www.youtube.com/watch?v=Ys7-6_t7OEQ' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPlaylist Load (0.0ms)[0m  SELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlist_videos" ("created_at", "playlist_id", "updated_at", "video_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["playlist_id", 1], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["video_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "videos" 
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "playlists" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00], ["updated_at", Sat, 15 Jun 2013 22:25:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VideosController#create as JSON
+  Parameters: {"video"=>{"url"=>"  ", "title"=>"J Beebs"}, "playlist_id"=>1}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."url" = ' ' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m

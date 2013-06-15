@@ -19,4 +19,12 @@ describe PlaylistsController do
       expect(json['videos'].count).to eq(2)
     end
   end
+
+  describe "POST create" do
+    it "creates a playlist" do
+      expect{
+        post :create, format: :json
+      }.to change(Playlist, :count).by(1)
+    end
+  end
 end

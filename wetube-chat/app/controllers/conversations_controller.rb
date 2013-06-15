@@ -5,4 +5,9 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     respond_with @conversation
   end
+
+  def create
+    @conversation = Conversation.create
+    render json: @conversation.to_json
+  end
 end
