@@ -27,8 +27,6 @@ $(function() {
     var value = options.value
     console.log(value);
 
-    s
-
       jQuery.each(data,function(index, element) {
         var source = template.html();
         var feedItemTemplate = Handlebars.compile(source);
