@@ -1,4 +1,4 @@
 WetubeFrontend::Application.routes.draw do
-  root to: 'theatres#show'
-  resources :theatres
+  root to: 'home#show'
+  resources :theaters, only: [:show, :create]
 end
