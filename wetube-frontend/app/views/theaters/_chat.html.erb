@@ -1,13 +1,15 @@
 <div id="chat">
   <div id='messages-container'>
     <% @conversation.messages.each do |message| %>
-      <%= render partial: "message", locals: {message: message} %>
+      <%= render partial: "messages/message", locals: {message: message} %>
     <% end %>
     <!-- Why is the background color of message class different from messages-container -->
   </div>
 
-  <div class='message-form'>
-    <textarea id='message-text-area' rows="3"></textarea>
-    <div id='message-submit-button'></div>
-  </div>
+  <form class='message-form' action="/messages" method="post">
+    <textarea id='message-text-area' rows="3" name="content"></textarea>
+    <input type="hidden" name="conversation_id" value="<%= @conversation.id %>"></input>
+    <!-- I'm always a little hesitant about using hidden fields. Thoughts? -->
+    <button id='message-submit-button'>Submit</button>
+  </form>
 </div>
