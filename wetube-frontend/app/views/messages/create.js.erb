@@ -1,2 +1,3 @@
-$("#messages-container").append("<%= escape_javascript render(@message) %>");
-$("#message-text-area").reset();
+$("#messages-container").append("<%= escape_javascript render partial: 'messages/message', locals: {message: @message} %>");
+
+$("#message-text-area").val("");

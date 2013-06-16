@@ -6,7 +6,7 @@
     <!-- Why is the background color of message class different from messages-container -->
   </div>
 
-  <form class='message-form' action="/messages" method="post">
+  <form class='message-form' action="/messages" method="post" data-remote="true">
     <textarea id='message-text-area' rows="3" name="content"></textarea>
     <input type="hidden" name="conversation_id" value="<%= @conversation.id %>"></input>
     <!-- I'm always a little hesitant about using hidden fields. Thoughts? -->
