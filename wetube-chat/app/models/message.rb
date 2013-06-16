@@ -8,6 +8,6 @@ class Message < ActiveRecord::Base
   belongs_to :conversation
 
   def as_json(options={})
-    super(only: [:id, :content, :user_id])
+    super(only: [:id, :content, :user_id, :created_at])
   end
 end
