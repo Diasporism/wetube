@@ -13,3 +13,9 @@ God.watch do |w|
   w.start = "cd #{path}/wetube-playlist/; rails s -p 3001"
   w.keepalive
 end
+
+God.watch do |w|
+  w.name = "frontend"
+  w.start = "cd #{path}/wetube-frontend/; rails s -p 8000"
+  w.keepalive
+end

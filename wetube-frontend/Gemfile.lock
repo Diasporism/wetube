@@ -118,7 +118,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     vcr (2.5.0)
-    wetube (0.0.1)
+    wetube (0.0.2)
 
 PLATFORMS
   ruby
