@@ -1,3 +1,5 @@
-$("#messages-container").append("<%= escape_javascript render partial: 'messages/message', locals: {message: @message} %>");
+var theaterUri = ("/theaters/"+$('#controls').data().theaterId);
+
+$("#messages-container").append("<%= j render partial: 'messages/message', locals: {message: @message} %>");
 
 $("#message-text-area").val("");

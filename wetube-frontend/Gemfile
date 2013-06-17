@@ -6,6 +6,7 @@ gem 'wetube'
 gem 'hashie'
 gem 'rest-client'
 gem 'faye'
+gem 'thin'
 
 group :test, :development do
   gem 'sqlite3'
