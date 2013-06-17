@@ -1,4 +1,4 @@
-<% publish_to "/theaters/show" do %>
+<% publish_to "/theaters/show/#{@theater_id}" do %>
   $("#messages-container").append("<%= j render partial: 'messages/message', locals: {message: @message} %>");
 <% end %>
 $("#message-text-area").val("");
