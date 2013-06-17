@@ -5,9 +5,11 @@ wetube
 
 To install and deploy:
 * Pull down file.
-``` gem install god
-``` god -c services.god -D
+* gem install god
+* god -c services.god -D
 
-This will start up all servers. You will then have to enter chat, frontend, and playlist and run a 'rake db:migrate'. Finally, enter frontend and run 'rake db:seed'.
+This will run a procfile/god command, starting several local servers and faye through private pub.
 
-That's it! For now...
+You will then have to enter chat, frontend, and playlist individually and run a 'rake db:migrate' to migrate the development databases. Finally, enter frontend and run 'rake db:seed' to set up some initial theaters.
+
+To run tests, enter any of chat, frontend, gem, or playlist. Run 'rake db:test:prepare' to migrate the test databases. Run 'bundle exec rspec spec'. Note: in the gem directory, there is no need to run db:test:prepare.
