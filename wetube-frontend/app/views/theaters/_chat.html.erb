@@ -7,9 +7,9 @@
   </div>
 
   <form class='message-form' action="/messages" method="post" data-remote="true">
-    <textarea id='message-text-area' rows="3" name="content"></textarea>
+    <input type="text" id='message-text-area' rows="3" name="content"></textarea>
     <input type="hidden" name="conversation_id" value="<%= @conversation.id %>"></input>
-    <!-- I'm always a little hesitant about using hidden fields. Thoughts? -->
+    <!-- If the theater is private, we'd likely wanna add a require_login hook -->
     <button id='message-submit-button'>Submit</button>
   </form>
 </div>
