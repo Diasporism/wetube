@@ -22,6 +22,6 @@ end
 
 God.watch do |w|
  w.name = "faye"
- w.start = "cd #{path}/wetube-frontend/; rackup faye.ru -s thin -E production"
+ w.start = "cd #{path}/wetube-frontend/; rackup private_pub.ru -s thin -E production"
  w.keepalive
 end

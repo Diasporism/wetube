@@ -1,5 +1,4 @@
-var theaterUri = ("/theaters/"+$('#controls').data().theaterId);
-
-$("#messages-container").append("<%= j render partial: 'messages/message', locals: {message: @message} %>");
-
+<% publish_to "/theaters/show" do %>
+  $("#messages-container").append("<%= j render partial: 'messages/message', locals: {message: @message} %>");
+<% end %>
 $("#message-text-area").val("");
