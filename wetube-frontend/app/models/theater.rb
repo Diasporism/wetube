@@ -1,4 +1,4 @@
-  class Theater < ActiveRecord::Base
+class Theater < ActiveRecord::Base
   attr_accessible :name, :genre
   validates_uniqueness_of [:conversation_id, :playlist_id, :name, :slug]
   validates_presence_of [:name, :genre]
