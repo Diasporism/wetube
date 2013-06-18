@@ -3,7 +3,7 @@ require 'spec_helper'
 describe VideosController do
   describe "POST create" do
     let!(:valid_params){
-      { url: "http://www.youtube.com/watch?v=Ys7-6_t7OEQ",
+      { video_id: "Ys7-6_t7OEQ",
         title: "J Beebs"}
     }
 
@@ -24,7 +24,7 @@ describe VideosController do
     end
 
     it "returns errors if video has invalid params" do
-      post :create, video:  {url: "  ", title: "J Beebs"}, format: :json, playlist_id: playlist.id 
+      post :create, video:  {video_id: "  ", title: "J Beebs"}, format: :json, playlist_id: playlist.id 
       expect(response.body).to include("be blank")
     end
   end

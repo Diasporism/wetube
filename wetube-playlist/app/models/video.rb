@@ -2,10 +2,10 @@ class Video < ActiveRecord::Base
   has_many :playlist_videos
   has_many :playlists, through: :playlist_videos
 
-  attr_accessible :url,
+  attr_accessible :video_id,
                   :title
 
-  validates :url,   presence: true
+  validates :video_id,   presence: true
   validates :title, presence: true
 
   def add_to_playlist(playlist_id)

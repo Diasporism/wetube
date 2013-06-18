@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   respond_to :json
 
   def create
-    @video = Video.find_or_create_by_url(params[:video][:url])
+    @video = Video.find_or_create_by_video_id(params[:video][:video_id])
     @video.update_attributes(params[:video])
 
     if @video.save

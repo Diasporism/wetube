@@ -12,8 +12,8 @@ describe PlaylistsController do
     end
 
     it "returns a playlist filled with videos" do
-      video_1 = playlist.videos.create(url: "http://www.youtube.com/something", title: "Something")
-      video_2 = playlist.videos.create(url: "http://www.youtube.com/something_else", title: "Something else")
+      video_1 = playlist.videos.create(video_id: "something", title: "Something")
+      video_2 = playlist.videos.create(video_id: "something_else", title: "Something else")
       get :show, id: playlist.id, format: :json
       json = JSON.parse(response.body)
       expect(json['videos'].count).to eq(2)
