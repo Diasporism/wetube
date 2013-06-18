@@ -18,6 +18,7 @@ module Wetube
     end
 
     def self.find_or_create_video(playlist_id, params)
+      # parse the YouTube URL from the params and use below
       response = Server.post_resource(create_url, {video: params, playlist_id: playlist_id})
       handle_json(response)
     end
