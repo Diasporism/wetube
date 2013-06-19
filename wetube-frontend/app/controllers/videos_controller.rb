@@ -6,7 +6,8 @@ class VideosController < ApplicationController
     @video      = Wetube::Playlist.find_or_create_video(
       params[:playlist_id],
       { video_id: video_id,
-        title: video_id
+        title: meta[:title],
+        thumbnail: meta[:thumbnail]
       })
   end
 end
