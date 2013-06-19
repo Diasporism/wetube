@@ -1,9 +1,11 @@
 <div id="playlist">
   <div id='playlists-container'>
     <h4><%= @theater.name %></h4>
+    <ul>
     <% @playlist.videos.each do |video| %>
       <%= render partial: "videos/video", locals: {video: video} %>
     <% end %>
+    </ul>
   </div>
   <form id='playlist-input' action="/videos" method="post" data-remote="true"> 
     <input type="text" id='playlist-text-area' rows="3" name="video_id"></textarea>

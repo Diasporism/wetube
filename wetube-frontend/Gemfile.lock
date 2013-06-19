@@ -64,6 +64,9 @@ GEM
     faye-websocket (0.6.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.2.0)
+    gon (4.1.1)
+      actionpack (>= 2.3.0)
+      json
     hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.5.3)
@@ -77,7 +80,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    mini_portile (0.5.0)
     multi_json (1.7.6)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
     private_pub (1.0.3)
@@ -152,6 +158,10 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
     websocket-driver (0.2.0)
     wetube (0.0.2)
     yajl-ruby (1.1.0)
@@ -162,6 +172,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   faye
+  gon
   hashie
   jquery-rails
   pg
@@ -176,4 +187,5 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   vcr
   webmock
+  webrat
   wetube

@@ -2,6 +2,7 @@ require 'simplecov'
 SimpleCov.start
 
 require 'vcr'
+require 'hashie'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
