@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Video do
   let(:video){
-    Video.create(video_id: "Ys7-6_t7OEQ", title: "Some title")
+    Video.create(video_id: "Ys7-6_t7OEQ", title: "Some title", thumbnail: "thumb")
   }
 
   it "is not valid without a video" do
@@ -12,6 +12,10 @@ describe Video do
   it "is not valid without a title" do
     expect{ video.title = nil }.to change{ video.valid? }.to false
   end
+
+  it "is not valid without a thumbnail" do
+    expect{ video.thumbnail = nil }.to change{ video.valid? }.to false
+  end  
 
   describe ".add_to_playlist" do
     it "adds a video to the list of playlist videos" do

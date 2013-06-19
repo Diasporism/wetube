@@ -4,7 +4,8 @@ describe VideosController do
   describe "POST create" do
     let!(:valid_params){
       { video_id: "Ys7-6_t7OEQ",
-        title: "J Beebs"}
+        title: "J Beebs",
+        thumbnail: "forever" }
     }
 
     let!(:playlist){Playlist.create}
