@@ -1,3 +1,4 @@
+var cache = {};
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -5,10 +6,23 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player = '';
+function findCurrentVideo() {
+    return playlist().children().first();
+}
+
+function playlist() {
+    if (playlist in cache) {
+        console.log("found something!")
+        return cache[playlist];
+    } else {
+        console.log("MAN, we ain't found SHIT")
+        return cache[playlist] = $('#playlists-container > ul');
+    }
+}
+
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video', {
-        videoId: gon.playlist[0],
+        videoId: findCurrentVideo().data('video-id'),
         playerVars: {
             controls: 0,
             modestbranding: 1,
@@ -30,9 +44,9 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
-        console.log("Video " + gon.playlist[0] + " completed");
-        $("#playlists-container > ul").children().first().remove();
-        player.loadVideoById(gon.playlist[1]);
-        gon.playlist.shift();
+        findCurrentVideo().remove();
+        player.loadVideoById(findCurrentVideo().data('video-id'));
+
+//        Update ActiveRecord playlist to match
     }
 }
