@@ -9,6 +9,14 @@ var player = '';
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video', {
         videoId: gon.playlist[0],
+        playerVars: {
+            controls: 0,
+            modestbranding: 1,
+            rel: 0,
+            showinfo: 0,
+            iv_load_policy: 3,
+            disablekb: 1
+        },
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
