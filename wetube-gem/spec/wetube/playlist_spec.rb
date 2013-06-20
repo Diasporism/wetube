@@ -31,4 +31,11 @@ describe Wetube::Playlist do
       expect(result.title).to eq "Something else"
     end
   end
+
+  describe ".get_video_id" do
+    it "gets the video id from a youtube url string" do
+      url = "http://www.youtube.com/?v=1"
+      expect(described_class.get_video_id(url)).to eq '1'
+    end
+  end
 end

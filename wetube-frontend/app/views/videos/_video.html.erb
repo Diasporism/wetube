@@ -1,5 +1,5 @@
 <div class="video">
-  <ul>
-    <li><%= video.video_id %></li>
-  </ul>
+  <img src="<%= video.thumbnail %>">
+  <span><%= video.title %></span>
+  <span><%= convert_seconds_to_time(video.duration) %></span>
 </div>
