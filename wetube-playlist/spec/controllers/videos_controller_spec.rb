@@ -5,7 +5,8 @@ describe VideosController do
     let!(:valid_params){
       { video_id: "Ys7-6_t7OEQ",
         title: "J Beebs",
-        thumbnail: "forever" }
+        thumbnail: "forever",
+        duration: 405 }
     }
 
     let!(:playlist){Playlist.create}

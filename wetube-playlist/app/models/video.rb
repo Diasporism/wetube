@@ -4,11 +4,13 @@ class Video < ActiveRecord::Base
 
   attr_accessible :video_id,
                   :title,
-                  :thumbnail
+                  :thumbnail,
+                  :duration
 
   validates :video_id,  presence: true
   validates :title,     presence: true
   validates :thumbnail, presence: true
+  validates :duration,  presence: true
 
   def add_to_playlist(playlist_id)
     playlist = Playlist.find(playlist_id)
