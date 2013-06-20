@@ -40,8 +40,6 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     cookiejar (0.3.0)
-    crack (0.4.0)
-      safe_yaml (~> 0.9.0)
     daemons (1.1.9)
     diff-lcs (1.2.4)
     em-http-request (1.0.3)
@@ -130,7 +128,6 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    safe_yaml (0.9.3)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -161,9 +158,6 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     vcr (2.5.0)
-    webmock (1.11.0)
-      addressable (>= 2.2.7)
-      crack (>= 0.3.2)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
@@ -192,6 +186,5 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   vcr
-  webmock
   webrat
   wetube
