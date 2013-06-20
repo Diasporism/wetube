@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 // CSS for chat below:
@@ -11,10 +12,8 @@ html, body {
   display: inline-block;
   margin: 0 auto;
   height: 100%;
-  width: 20%;
+  width: 16%;
   left: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: red;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -37,7 +36,6 @@ html, body {
   display: block;
   height: 10%;
   bottom: 0;
-      border-width: 1px;
   background-color: purple;
 }
 
@@ -47,8 +45,6 @@ html, body {
   width: 100%;
   height: 10%;
   bottom: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: burlywood;
   text-align: center;
 }
@@ -69,8 +65,6 @@ html, body {
   horizontal-align: middle;
   height: 83%;
   width: 30%;
-  border-style: solid;
-  border-width: 1px;
   background-color: blue;
 }
 
@@ -80,10 +74,8 @@ html, body {
   position: absolute;
   display: inline-block;
   height: 100%;
-  width: 20%;
+  width: 30%;
   right: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: blue;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -93,11 +85,12 @@ html, body {
 #playlists-container {
   position: relative;
   position: absolute;
+  padding: 1em;
   display: block;
   top: 0;
   height: 90%;
   width: 100%;
-  background-color: orange;
+  background-color: #f9f9f9;
   overflow-y: scroll;
 }
 
@@ -106,8 +99,6 @@ html, body {
   display: block;
   height: 10%;
   bottom: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: orange;
 }
 
@@ -117,8 +108,6 @@ html, body {
   width: 100%;
   height: 10%;
   bottom: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: burlywood;
   text-align: center;
 }
@@ -139,9 +128,23 @@ html, body {
   horizontal-align: middle;
   height: 83%;
   width: 30%;
-  border-style: solid;
-  border-width: 1px;
   background-color: red;
+}
+
+.video {
+  float: left;
+  padding-bottom: .5em;
+  width: 100%;
+  img {
+    float: left;
+  }
+  span {
+    float: left;
+    width: 59%;
+    padding-left: 1em;
+    font-weight: bold;
+    font-size: .8em;
+  }
 }
 
 // CSS for video player below:
@@ -149,12 +152,10 @@ html, body {
 #video {
   position: absolute;
   display: inline-block;
-  left: 20%;
+  left: 16%;
   height: 80%;
-  width: 60%;
+  width: 54%;
   top: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: grey;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -167,11 +168,9 @@ html, body {
   position: absolute;
   display: inline-block;
   height: 20%;
-  width: 60%;
-  left: 20%;
+  width: 54%;
+  left: 16%;
   bottom: 0;
-  border-style: solid;
-  border-width: 1px;
   background-color: green;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
