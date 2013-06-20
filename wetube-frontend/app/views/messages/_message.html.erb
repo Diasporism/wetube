@@ -1,6 +1,6 @@
 <div class='message'>
   <ul>
-    <li><%= message.content %></li>
     <li><%= DateTime.parse(message.created_at).strftime("%H:%M") %></li>
+    <li><%= message.content %></li>
   </ul>
 </div>
