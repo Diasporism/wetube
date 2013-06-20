@@ -64,9 +64,6 @@ GEM
     faye-websocket (0.6.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.2.0)
-    gon (4.1.1)
-      actionpack (>= 2.3.0)
-      json
     hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.5.3)
@@ -172,7 +169,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   faye
-  gon
   hashie
   jquery-rails
   pg
