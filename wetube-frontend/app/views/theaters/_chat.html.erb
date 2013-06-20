@@ -1,8 +1,6 @@
 <div id="chat">
   <div id='messages-container'>
-    <% @conversation.messages.each do |message| %>
-      <%= render partial: "messages/message", locals: {message: message} %>
-    <% end %>
+
     <!-- Why is the background color of message class different from messages-container -->
   </div>
 

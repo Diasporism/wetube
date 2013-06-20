@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 describe TheatersController do
+  render_views
+
   describe "GET show" do
+
     before :each do
       Theater.any_instance.stub(:initialize_theater_from_gem)
       @theater = Theater.new(valid_params)
