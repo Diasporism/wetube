@@ -10,16 +10,16 @@ describe TheatersController do
       @theater = Theater.new(valid_params)
       @theater.conversation_id = 1
       @theater.playlist_id = 1
+      Wetube::Conversation.stub(find: Hashie::Mash.new(messages: []))
+      Wetube::Playlist.stub(find: Hashie::Mash.new(videos: []))
       @theater.save
     end
 
     let!(:valid_params){{name: "James Blakeness' Essential 01", genre: 'music videos'}}
 
     it "response is 200 on created theater" do
-      VCR.use_cassette('200_theater') do
-        get :show, id: @theater.slug
-        expect(response.status).to eq 200
-      end
+      get :show, id: @theater.slug
+      expect(response.status).to eq 200
     end
   end
 end

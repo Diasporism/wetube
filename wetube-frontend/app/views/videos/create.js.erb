@@ -1,4 +1,4 @@
 <% publish_to "/theaters/show/#{@theater_id}" do %>
-  $("#playlists-container > ul").append("<%= j render partial: 'videos/video', locals: {video: @video} %>");
+  $("#playlists-container > div").append("<%= j render partial: 'videos/video', locals: {video: @video} %>");
 <% end %>
 $("#playlist-text-area").val("");

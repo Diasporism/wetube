@@ -16,7 +16,7 @@ function playlist() {
         return cache[playlist];
     } else {
         console.log("MAN, we ain't found SHIT")
-        return cache[playlist] = $('#playlists-container > ul');
+        return cache[playlist] = $('#playlists-container > div');
     }
 }
 
