@@ -9,6 +9,7 @@ gem 'faye'
 gem 'thin'
 gem 'private_pub'
 gem 'pry'
+gem 'therubyracer'
 
 group :test, :development do
   gem 'sqlite3'
