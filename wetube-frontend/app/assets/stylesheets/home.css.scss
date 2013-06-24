@@ -10,7 +10,9 @@
   border-width: 0px 30px;
   float: left;
   width: 40%;
-  opacity: 0.5;
+  height: 100%;
+  overflow-y: scroll; 
+  opacity: 0.65;
   img {
     width: 100%;
     border-top: black 10px solid;
@@ -19,7 +21,7 @@
 }
 
 #home-title {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(193, 193, 215, 0.5);
   color: black;
   width: 40%;
   float: right;
@@ -28,6 +30,9 @@
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
+  h1 {
+    text-align: center;
+  }
 }
 
 html {
