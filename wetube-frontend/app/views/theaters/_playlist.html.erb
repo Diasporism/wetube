@@ -1,6 +1,5 @@
 <div id="playlist">
   <div id='playlists-container'>
-    <h4><%= @theater.name %></h4>
     <div>
     <% @playlist.videos.each do |video| %>
       <%= render partial: "videos/video", locals: {video: video} %>
