@@ -1,12 +1,12 @@
 <div id="home-content">
   <div id='home-list'>
     <% @playlists.each do |playlist| %>
-      <a href="/theaters/<%= playlist.first %>"><img src="assets/<%= playlist.last %>" /></a>
+      <%= link_to image_tag(playlist[:image]), theater_path(playlist[:slug]) %>
     <% end %>
   </div>
 
   <div id="home-title">
     <h1>Welcome to WeTube</h1>
-    <h3>Interactive theaters for you and your loved ones DERP DE DERP DERP</h3>
+    <h3>Interactive theaters. Watch YouTube videos with your friends. Check out our theaters on the right</h3>
   </div>
 </div>

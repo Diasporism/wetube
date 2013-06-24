@@ -1,15 +1,25 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :seed_playlists
+  helper_method :seeded_playlists
 
-  def seed_playlists
-    {
-      "james-blakes-greatest-hits" => "home-filler.jpg",
-      "james-blakes-b-sides" => "home-filler.jpg",
-      "james-blakes-eponymous-first-try" => "home-filler.jpg",
-      "music-from-james-blakes-eps" => "home-filler.jpg",
-      "james-blakes-djing-prowess" => "home-filler.jpg"
-    }
+  def seeded_playlists
+    [ 
+      { image: "home-filler.jpg",
+        slug: "james-blakes-greatest-hits",
+        gif: "gif-filler.jpg"},
+      { image: "home-filler.jpg",
+        slug: "james-blakes-b-sides",
+        gif: "gif-filler.jpg"},
+      { image: "home-filler.jpg",
+        slug: "james-blakes-eponymous-first-try",
+        gif: "gif-filler.jpg"},
+      { image: "home-filler.jpg",
+        slug: "music-from-james-blakes-eps",
+        gif: "gif-filler.jpg"},
+      { image: "home-filler.jpg",
+        slug: "james-blakes-djing-prowess",
+        gif: "gif-filler.jpg"}
+    ]
   end
 
 end

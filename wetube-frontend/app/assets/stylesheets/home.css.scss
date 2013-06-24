@@ -8,11 +8,13 @@
 #home-list {
   border-image: url(film-border.png) 10% 100% repeat;
   border-width: 0px 30px;
-  background-color: black;
   float: left;
   width: 40%;
+  opacity: 0.5;
   img {
     width: 100%;
+    border-top: black 10px solid;
+    margin-bottom: -5px;
   }
 }
 
