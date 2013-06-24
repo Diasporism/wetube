@@ -6,17 +6,15 @@
 }
 
 #home-list {
-  width: 40%;
-  border-image: url(film-border2.png) 10% 60% repeat;
-  border-width: 0px 50px;
+  border-image: url(film-border2.png) 10% 50% repeat;
+  border-width: 0px 30px;
   float: left;
 }
 
 #home-title {
-  float: left;
   background: rgba(255, 255, 255, 0.5);
   color: black;
-  width:60%;
+  width: 60%;
 }
 
 html {
