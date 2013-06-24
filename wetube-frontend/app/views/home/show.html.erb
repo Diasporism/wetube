@@ -1,7 +1,7 @@
 <div id="home-content">
   <div id='home-list'>
     <% @playlists.each do |playlist| %>
-      <%= link_to image_tag(playlist[:image]), theater_path(playlist[:slug]) %>
+      <%= link_to image_tag(playlist[:image]), theater_path(playlist[:slug]), 'data-gif' => playlist[:gif], 'data-image' => playlist[:image] %>
     <% end %>
   </div>
 

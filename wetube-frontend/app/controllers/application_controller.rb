@@ -6,19 +6,19 @@ class ApplicationController < ActionController::Base
     [ 
       { image: "home-filler.jpg",
         slug: "james-blakes-greatest-hits",
-        gif: "gif-filler.jpg"},
+        gif: "gif-filler.gif"},
       { image: "home-filler.jpg",
         slug: "james-blakes-b-sides",
-        gif: "gif-filler.jpg"},
+        gif: "gif-filler.gif"},
       { image: "home-filler.jpg",
         slug: "james-blakes-eponymous-first-try",
-        gif: "gif-filler.jpg"},
+        gif: "gif-filler.gif"},
       { image: "home-filler.jpg",
         slug: "music-from-james-blakes-eps",
-        gif: "gif-filler.jpg"},
+        gif: "gif-filler.gif"},
       { image: "home-filler.jpg",
         slug: "james-blakes-djing-prowess",
-        gif: "gif-filler.jpg"}
+        gif: "gif-filler.gif"}
     ]
   end
 

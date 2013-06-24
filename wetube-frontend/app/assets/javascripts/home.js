@@ -1,8 +1,10 @@
 $(document).ready(function() {
    $("#home-list").find('img').on('mouseenter', function(){
-      $(this).attr("src", 'assets/gif-filler.gif');
+      var gif = $(this).parent('a').data('gif');
+      $(this).attr("src", 'assets/'+gif);
    });
    $("#home-list").find('img').on('mouseleave', function(){
-      $(this).attr("src", 'assets/home-filler.jpg');
+      var image = $(this).parent('a').data('image');
+      $(this).attr("src", 'assets/'+image);
    });
 });
