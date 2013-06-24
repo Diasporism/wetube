@@ -6,19 +6,30 @@
 }
 
 #home-list {
-  border-image: url(film-border2.png) 10% 50% repeat;
+  border-image: url(film-border.png) 10% 100% repeat;
   border-width: 0px 30px;
+  background-color: black;
   float: left;
+  width: 40%;
+  img {
+    width: 100%;
+  }
 }
 
 #home-title {
   background: rgba(255, 255, 255, 0.5);
   color: black;
-  width: 60%;
+  width: 40%;
+  float: right;
+  padding: 20px;
+  margin-top: 100px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
 }
 
 html {
-  background: url('http://3.bp.blogspot.com/_SvpUm_JJb0g/TUui_2oHsII/AAAAAAAAACs/lfplHeHSX8U/s1600/Movie+Theater.jpg') no-repeat center center fixed; 
+  background: url('theater.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
