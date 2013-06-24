@@ -1,0 +1,32 @@
+#home-content {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+#home-list {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  border-image: url(film-border2.png) 10% 60% repeat;
+  border-width: 0px 50px;
+}
+
+#home-title {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  width: 300px;
+  top: 30%;
+  right: 20%;
+}
+
+html {
+  background: url('http://3.bp.blogspot.com/_SvpUm_JJb0g/TUui_2oHsII/AAAAAAAAACs/lfplHeHSX8U/s1600/Movie+Theater.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
