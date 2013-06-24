@@ -116,7 +116,7 @@ header {
   display: block;
   top: 0;
   height: 90%;
-  width: 91.7%;
+  width: 100%;
   background-color: #EBF8F1;
   overflow-y: scroll;
 }
@@ -201,6 +201,7 @@ header {
 
 #controls {
   position: absolute;
+  text-align: center;
   display: inline-block;
   height: 9.1%;
   width: 54%;
