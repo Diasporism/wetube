@@ -16,5 +16,8 @@
   <div id="home-title">
     <h1>Welcome to Wetube</h1>
     <h3>Interactive theaters for you and your loved ones DERP DE DERP DERP</h3>
+    <% @theaters.each do |theater| %>
+      <%= theater.name %>
+    <% end %>
   </div>
 </div>
