@@ -1,3 +1,3 @@
-puts `cd wetube-chat; rake db:create; rake db:migrate; bundle; cd ..`
-puts `cd wetube-frontend; rake db:create; rake db:migrate; bundle; cd ..`
-puts `cd wetube-playlist; rake db:create; rake db:migrate; bundle; cd ..`
+puts `cd wetube-chat; bundle; rake db:create; rake db:migrate; cd ..`
+puts `cd wetube-frontend; bundle; rake db:create; rake db:migrate; cd ..`
+puts `cd wetube-playlist; bundle; rake db:create; rake db:migrate; cd ..`
