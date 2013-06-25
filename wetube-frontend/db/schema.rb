@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616023933) do
+ActiveRecord::Schema.define(:version => 20130619205554) do
+
+  create_table "conversations", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "conversation_id"
+  end
+
+  create_table "playlist_videos", :force => true do |t|
+    t.integer  "playlist_id"
+    t.integer  "video_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "playlists", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "theaters", :force => true do |t|
     t.integer  "conversation_id"
@@ -25,5 +50,16 @@ ActiveRecord::Schema.define(:version => 20130616023933) do
   end
 
   add_index "theaters", ["slug"], :name => "index_theaters_on_slug"
+
+  create_table "videos", :force => true do |t|
+    t.string   "video_id"
+    t.string   "uploader"
+    t.string   "title"
+    t.string   "uploaded_at"
+    t.integer  "duration"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "thumbnail"
+  end
 
 end

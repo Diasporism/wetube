@@ -13,6 +13,19 @@
 
 ActiveRecord::Schema.define(:version => 20130619205554) do
 
+  create_table "conversations", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "conversation_id"
+  end
+
   create_table "playlist_videos", :force => true do |t|
     t.integer  "playlist_id"
     t.integer  "video_id"
@@ -24,6 +37,19 @@ ActiveRecord::Schema.define(:version => 20130619205554) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "theaters", :force => true do |t|
+    t.integer  "conversation_id"
+    t.integer  "playlist_id"
+    t.string   "name"
+    t.string   "genre"
+    t.boolean  "private",         :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "slug"
+  end
+
+  add_index "theaters", ["slug"], :name => "index_theaters_on_slug"
 
   create_table "videos", :force => true do |t|
     t.string   "video_id"
