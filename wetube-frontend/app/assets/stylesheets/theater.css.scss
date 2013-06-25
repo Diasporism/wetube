@@ -25,7 +25,20 @@ header {
   height: 10%;
   top: 0px;
   font-family: 'SeasideResortNFRegular';
+  box-shadow: 1px 1px 5px #333;
+  z-index: 2;
   background: url('bg-curtain.jpg') repeat-x top center #2D7574;
+  h1 {
+    float:left;
+    margin-top: 1%;
+    margin-left: 1%;
+    color: white;
+  }
+  h2 {
+    text-align:center;
+    margin-right: 23%;
+    color: white;
+  }
 }
 
 // CSS for chat below:
@@ -225,4 +238,13 @@ header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#slider {
+  position: relative;
+  width: 70%;
+  height: 10%;
+  background-color: blue;
+  top: 40%;
+  left: 25%;
 }
