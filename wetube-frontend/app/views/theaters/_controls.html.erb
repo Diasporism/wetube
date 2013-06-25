@@ -1,11 +1,17 @@
 <div id="controls">
   <div id='slider'></div>
+  <form id='control_play' action="/videos/<%=@theater.id%>/play" method="post" data-remote="true">
+    <button>Play</button>
+  </form>
+  <form id='control_pause' action="/videos/<%=@theater.id%>/pause" method="post" data-remote="true">
+    <button id="control_pause">Pause</button>
+  </form>
 </div>
 
 <script type="text/javascript">
 
   $(function() {
-    $("#slider").slider();
+    $("#slider").slider({ disabled: true });
   });
 
 </script>

@@ -11,4 +11,12 @@ class VideosController < ApplicationController
         duration:  @meta[:duration]
       })
   end
+
+  def play
+    @theater_id = params[:id]
+  end
+
+  def pause
+    @theater_id = params[:id]
+  end
 end
