@@ -32,14 +32,10 @@ function onYouTubeIframeAPIReady() {
             disablekb: 1
         },
         events: {
-            'onReady': onPlayerReady,
+            // 'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
-}
-
-function onPlayerReady(event) {
-    event.target.playVideo();
 }
 
 function onPlayerStateChange(event) {
