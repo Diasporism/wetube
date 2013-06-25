@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'SeasideResortNFRegular';
+    src: url('SEASRN__-webfont.eot');
+    src: url('SEASRN__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('SEASRN__-webfont.woff') format('woff'),
+         url('SEASRN__-webfont.ttf') format('truetype'),
+         url('SEASRN__-webfont.svg#SeasideResortNFRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,7 +24,21 @@ header {
   width: 100%;
   height: 10%;
   top: 0px;
-  background-color: #2D7574;
+  font-family: 'SeasideResortNFRegular';
+  box-shadow: 1px 1px 5px #333;
+  z-index: 2;
+  background: url('bg-curtain.jpg') repeat-x top center #2D7574;
+  h1 {
+    float:left;
+    margin-top: 1%;
+    margin-left: 1%;
+    color: white;
+  }
+  h2 {
+    text-align:center;
+    margin-right: 23%;
+    color: white;
+  }
 }
 
 // CSS for chat below:
@@ -116,7 +142,7 @@ header {
   display: block;
   top: 0;
   height: 90%;
-  width: 100%;
+  width: 91.6%;
   background-color: #EBF8F1;
   overflow-y: scroll;
 }
@@ -186,7 +212,6 @@ header {
 
 #video {
   position: absolute;
-  display: inline-block;
   left: 16%;
   height: 80.9%;
   width: 54%;
@@ -195,13 +220,14 @@ header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 4;
 }
+
 
 // CSS for video controls/nav below:
 
 #controls {
   position: absolute;
-  text-align: center;
   display: inline-block;
   height: 9.1%;
   width: 54%;
@@ -212,4 +238,32 @@ header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  button {
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+#slider {
+  position: absolute;
+  width: 70%;
+  left: 25%;
+  top: 38%;
+  opacity: 1;
+}
+
+#control_play {
+  display: inline-block;
+  position: absolute;
+  margin-left: 20px;
+  top: 35%;
+  z-index: 5;
+} 
+
+#control_pause {
+  display: inline-block;
+  position: absolute;
+  margin-left: 35px;
+  top: 35%;
+  z-index: 5;
 }
