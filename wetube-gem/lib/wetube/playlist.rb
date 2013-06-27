@@ -45,9 +45,8 @@ module Wetube
 
     def self.assign_params_from_json(data)
       # trying to inject the status of the playlist video into the hashie mash
-      #playlist_videos = Server.get_resource(playlist_video_url(data['id']))
-      #raise playlist_videos.inspect
-
+      playlist_videos = Server.get_resource(playlist_video_url(data['id']))
+      raise playlist_videos.inspect
       Hashie::Mash.new(data)
     end
 
