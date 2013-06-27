@@ -6,10 +6,20 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: core
+  host: localhost
+  database: development_wetube
   pool: 5
-  username: 
-  password: 
+  username: wetube
+  password: wetube
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: 192.241.192.194
+  database: production_wetube
+  pool: 5
+  username: wetube
+  password: wetube
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,11 +27,5 @@ development:
 test:
   adapter: sqlite3
   database: db/test.sqlite3
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
   pool: 5
   timeout: 5000
