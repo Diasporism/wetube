@@ -30,10 +30,12 @@ describe PlaylistsController do
 
   describe "UPDATE playlist_video" do
     it "updates a playlist video's status to 'played'" do
+
+
       video_1 = playlist.videos.create(video_id: "something", title: "Something", thumbnail: "something", duration: 405)
       video_2 = playlist.videos.create(video_id: "something_else", title: "Something else", thumbnail: "something", duration: 405)
       
-      put :update, format: :json, playlist_id: playlist.id, video_id: video_1.id
+      put :update, format: :json, playlist_id: playlist.id, video_id: video_1.video_id
 
       expect(playlist.playlist_videos.first.status).to eq 'played'
       expect(playlist.playlist_videos.last.status).to eq 'queued'
