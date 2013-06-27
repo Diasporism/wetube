@@ -9,13 +9,13 @@ development:
   host: localhost
   database: development_wetube
   pool: 5
-  username: 
-  password: 
+  username: wetube
+  password: wetube
 
 production:
   adapter: postgresql
   encoding: unicode
-  host: 192.241.192.194
+  host: localhost
   database: production_wetube
   pool: 5
   username: wetube
