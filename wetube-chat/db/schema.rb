@@ -39,6 +39,19 @@ ActiveRecord::Schema.define(:version => 20130625235621) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "theaters", :force => true do |t|
+    t.integer  "conversation_id"
+    t.integer  "playlist_id"
+    t.string   "name"
+    t.string   "genre"
+    t.boolean  "private",         :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "slug"
+  end
+
+  add_index "theaters", ["slug"], :name => "index_theaters_on_slug"
+
   create_table "videos", :force => true do |t|
     t.string   "video_id"
     t.string   "uploader"

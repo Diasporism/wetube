@@ -21,14 +21,10 @@ module Wetube
 
     def self.find(id)
       response = Server.get_resource find_url(id)
-      handle_json(response)
+      assign_video_status_from_playlist(JSON.parse(response))
     end
 
     def self.find_or_create_video(playlist_id, params)
-      # parse the YouTube URL from the params and use below
-      # video_id = get_video_id(params[:url])
-      # params[:video_id] = video_id
-      # params.delete(:url)
       response = Server.post_resource(create_url, {video: params, playlist_id: playlist_id})
       handle_json(response)
     end
@@ -44,14 +40,16 @@ module Wetube
     end
 
     def self.assign_params_from_json(data)
-      # trying to inject the status of the playlist video into the hashie mash
-      playlist_videos = Server.get_resource(playlist_video_url(data['id']))
-      raise playlist_videos.inspect
       Hashie::Mash.new(data)
     end
 
-    def self.update_playlist_video_to_played(playlist_id, video_id)
-      Server.put_resource("#{base_url}/playlists/#{playlist_id}/#{video_id}")
+    def self.assign_video_status_from_playlist(data)
+      response = Server.get_resource(playlist_video_url(data['id']))
+      playlist_videos = JSON.parse(response)
+      statuses = playlist_videos.collect { |s| s['status'] }
+
+      data['videos'].each_with_index { |v, i| v['status'] = statuses[i] }
+      assign_params_from_json(data)
     end
   end
 end

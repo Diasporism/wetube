@@ -52,12 +52,17 @@
 
   function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
+      vID = findCurrentVideo().data('video-id');
+      pID = <%= @playlist.id %>;
       findCurrentVideo().remove();
       player.loadVideoById(findCurrentVideo().data('video-id'));    
       $("#slider").slider({ value: 0 });
       clearInterval(interval);
+      $.ajax({
+        url : "http://127.0.0.1:3001/playlists/" + pID + "/videos/" + vID,
+        type : "GET"})
     }
-    if (event.data === YT.PlayerState.PLAYING) {    
+    if (event.data === YT.PlayerState.PLAYING) {
       interval = setInterval(increment_slider, 1000);
       $.ajax({
         url : "/videos/" + <%= @theater.id %> + "/play",

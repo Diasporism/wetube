@@ -1,3 +1,8 @@
+PATH
+  remote: ../wetube-gem
+  specs:
+    wetube (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,7 +175,6 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
     websocket-driver (0.2.0)
-    wetube (0.0.2)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -196,4 +200,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   vcr
   webrat
-  wetube
+  wetube!

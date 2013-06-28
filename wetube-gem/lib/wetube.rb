@@ -15,9 +15,5 @@ module Wetube
     def self.post_resource(url, params = {})
       RestClient.post url, params
     end
-
-    def self.put_resource(url, params = {})
-      RestClient.put url, params
-    end
   end
 end
