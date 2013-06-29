@@ -8,4 +8,5 @@ WetubeFrontend::Application.routes.draw do
       post :pause
     end
   end
+  post '/name', to: 'messages#name', as: 'name'
 end
