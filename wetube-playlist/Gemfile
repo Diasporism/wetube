@@ -13,11 +13,13 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'rspec-pride'
   gem 'simplecov'
+  gem 'sqlite3'
 end
 
-group :test do
-  gem 'sqlite3'
+group :development do
+  gem 'quiet_assets'
 end
 
 group :development, :production do

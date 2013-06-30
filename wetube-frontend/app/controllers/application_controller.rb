@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :seeded_playlists
+  after_filter :set_access_control_headers
 
   def seeded_playlists
     [ 
@@ -20,6 +21,13 @@ class ApplicationController < ActionController::Base
         slug: "james-blakes-djing-prowess",
         gif: "gif-filler.gif"}
     ]
+  end
+
+  after_filter :set_access_control_headers
+
+  def set_access_control_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Request-Method'] = '*'
   end
 
 end
