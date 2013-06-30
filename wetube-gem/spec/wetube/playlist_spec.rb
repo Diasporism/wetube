@@ -4,8 +4,9 @@ require 'pry'
 describe Wetube::Playlist do
   describe ".find" do
     before(:each) do
-      response = "{\"id\":1,\"created_at\":\"2013-06-13T21:41:22Z\",\"videos\":[{\"duration\":null,\"id\":1,\"title\":\"Something\",\"uploaded_at\":null,\"uploader\":null,\"url\":\"http://www.youtube.com/something\"},{\"duration\":null,\"id\":2,\"title\":\"Something else\",\"uploaded_at\":null,\"uploader\":null,\"url\":\"http://www.youtube.com/something_else\"}]}"
-      Wetube::Server.stub(:get_resource).and_return(response)
+      response  = "{\"id\":1,\"created_at\":\"2013-06-13T21:41:22Z\",\"videos\":[{\"duration\":null,\"id\":1,\"title\":\"Something\",\"uploaded_at\":null,\"uploader\":null,\"url\":\"http://www.youtube.com/something\"},{\"duration\":null,\"id\":2,\"title\":\"Something else\",\"uploaded_at\":null,\"uploader\":null,\"url\":\"http://www.youtube.com/something_else\"}]}"
+      response2 = "[{\"created_at\":\"2013-06-28T16:19:42Z\",\"id\":1,\"playlist_id\":1,\"status\":\"played\",\"updated_at\":\"2013-06-28T17:08:25Z\",\"video_id\":1},{\"created_at\":\"2013-06-28T16:19:43Z\",\"id\":2,\"playlist_id\":1,\"status\":\"played\",\"updated_at\":\"2013-06-28T17:08:31Z\",\"video_id\":1}]"
+      Wetube::Server.stub(:get_resource).and_return(response, response2)
     end
 
     it "returns a hashie of found playlist" do
