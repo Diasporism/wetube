@@ -47,8 +47,13 @@ module Wetube
       response = Server.get_resource(playlist_video_url(data['id']))
       playlist_videos = JSON.parse(response)
       statuses = playlist_videos.collect { |s| s['status'] }
+      ids = playlist_videos.collect { |s| s['id'] }
 
-      data['videos'].each_with_index { |v, i| v['status'] = statuses[i] }
+      data['videos'].each_with_index do |v, i|
+        v['status'] = statuses[i]
+        v['unique_id'] = ids[i]
+      end
+
       assign_params_from_json(data)
     end
   end

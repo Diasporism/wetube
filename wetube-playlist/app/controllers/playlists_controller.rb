@@ -12,10 +12,7 @@ class PlaylistsController < ApplicationController
   end
 
   def update
-    playlist_id    = Playlist.where(id: params[:playlist_id]).first.id
-    video_id       = Video.where(video_id: params[:video_id]).first.id
-    playlist_video = PlaylistVideo.where(video_id: video_id, playlist_id: playlist_id, status: 'queued').first
-    
+    playlist_video = PlaylistVideo.where(id: params[:id]).first
     playlist_video.update_attributes(status: 'played')
     respond_with @playlist_video
   end
