@@ -13,19 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130625235621) do
 
-  create_table "conversations", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "messages", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.integer  "conversation_id"
-  end
-
   create_table "playlist_videos", :force => true do |t|
     t.integer  "playlist_id"
     t.integer  "video_id"
