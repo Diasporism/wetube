@@ -1,6 +1,6 @@
 <div id="chat">
 
-  <% if session[:sharsheeshar].nil? %>
+  <% if session[:name].nil? %>
     <div id='messages-container'></div>
     <form class='name-form' action="/name" method="post" data-remote="true">
       <input type="text" id='message-name-area' rows="3" name="name" placeholder="Enter your name"></textarea>

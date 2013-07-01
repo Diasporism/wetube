@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
   end
 
   def name
-    session[:sharsheeshar] = params[:name]
+    session[:name] = params[:name]
     render json: session[:name].to_json
   end
 end
