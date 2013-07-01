@@ -41,16 +41,35 @@ header {
   }
 }
 
+// CSS for search below:
+
+#search {
+  position: absolute;
+  display: inline-block;
+  margin: 0 auto;
+  height: 45%;
+  width: 16%;
+  left: 0;
+  top: 10%;
+  background-color: #EBF8F1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: #000000;
+  border-style: solid;
+  border-width: 1px;
+}
+
 // CSS for chat below:
 
 #chat {
   position: absolute;
   display: inline-block;
   margin: 0 auto;
-  height: 90%;
+  height: 45%;
   width: 16%;
   left: 0;
-  top: 10%;
+  top: 55%;
   background-color: #EBF8F1;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
