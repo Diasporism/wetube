@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'pry'
 gem 'jquery-rails'
 gem 'therubyracer'
+gem 'thin'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

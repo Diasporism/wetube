@@ -10,6 +10,7 @@ gem 'thin'
 gem 'private_pub'
 gem 'pry'
 gem 'therubyracer'
+gem 'capistrano'
 
 group :test do
   gem 'sqlite3'
