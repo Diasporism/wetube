@@ -5,21 +5,21 @@ class ApplicationController < ActionController::Base
 
   def seeded_playlists
     [ 
-      { image: "home-filler.jpg",
+      { image: "blake.jpg",
         slug: "james-blake-videos",
-        gif: "gif-filler.gif"},
+        gif: "blake.gif"},
       { image: "goat.jpg",
         slug: "hilarious-animals",
         gif: "goat.gif"},
       { image: "dunk.jpg",
         slug: "top-plays-of-2013",
         gif: "dunk.gif"},
-      { image: "home-filler.jpg",
-        slug: "music-from-james-blakes-eps",
-        gif: "gif-filler.gif"},
-      { image: "home-filler.jpg",
-        slug: "james-blakes-djing-prowess",
-        gif: "gif-filler.gif"}
+      # { image: "home-filler.jpg",
+      #   slug: "music-from-james-blakes-eps",
+      #   gif: "gif-filler.gif"},
+      # { image: "home-filler.jpg",
+      #   slug: "james-blakes-djing-prowess",
+      #   gif: "gif-filler.gif"}
     ]
   end
 
