@@ -3,17 +3,19 @@ class ApplicationController < ActionController::Base
   helper_method :seeded_playlists
   after_filter :set_access_control_headers
 
+  S3_BUCKET = "http://s3.amazonaws.com/wetube"
+
   def seeded_playlists
     [ 
-      { image: "blake.jpg",
+      { image: "#{S3_BUCKET}/blake.jpg",
         slug: "james-blake-videos",
-        gif: "http://s3.amazonaws.com/wetube/blake.gif"},
-      { image: "goat.jpg",
+        gif: "#{S3_BUCKET}/blake.gif"},
+      { image: "#{S3_BUCKET}/goat.jpg",
         slug: "hilarious-animals",
-        gif: "http://s3.amazonaws.com/wetube/goat.gif"},
-      { image: "dunk.jpg",
+        gif: "#{S3_BUCKET}/goat.gif"},
+      { image: "#{S3_BUCKET}/dunk.jpg",
         slug: "top-plays-of-2013",
-        gif: "http://s3.amazonaws.com/wetube/dunk.gif"}
+        gif: "#{S3_BUCKET}/dunk.gif"}
     ]
   end
 
