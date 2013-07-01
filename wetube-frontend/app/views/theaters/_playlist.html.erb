@@ -2,7 +2,7 @@
   <div id='playlists-container'>
     <div>
     <% @playlist.videos.each do |video| %>
-      <%= render partial: "videos/video", locals: {video: video} %>
+      <%= render partial: "videos/video", locals: {video: video} if video.status == 'queued' %>
     <% end %>
     </div>
   </div>

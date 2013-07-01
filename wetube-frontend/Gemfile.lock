@@ -1,3 +1,8 @@
+PATH
+  remote: ../wetube-gem
+  specs:
+    wetube (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,6 +96,8 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -168,7 +175,6 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
     websocket-driver (0.2.0)
-    wetube (0.0.2)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -182,6 +188,7 @@ DEPENDENCIES
   pg
   private_pub
   pry
+  quiet_assets
   rails (= 3.2.13)
   rest-client
   rspec-rails
@@ -193,4 +200,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   vcr
   webrat
-  wetube
+  wetube!
