@@ -18,6 +18,10 @@ html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.brand_name {
+ font-family: 'SeasideResortNFRegular', cursive; 
+}
+
 header {
   position: absolute;
   display: inline-block;
@@ -32,7 +36,10 @@ header {
     float:left;
     margin-top: 1%;
     margin-left: 1%;
-    color: white;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
   h2 {
     text-align:center;
@@ -141,7 +148,7 @@ header {
   width: 30%;
   right: 0;
   top: 10%;
-  background-color: blue;
+  background-color: #EBF8F1;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
