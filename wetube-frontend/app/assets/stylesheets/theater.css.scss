@@ -242,6 +242,18 @@ header {
   z-index: 4;
 }
 
+#video-cover {
+  position: absolute;
+  left: 16%;
+  height: 80.9%;
+  width: 54%;
+  top: 10%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
 
 // CSS for video controls/nav below:
 
