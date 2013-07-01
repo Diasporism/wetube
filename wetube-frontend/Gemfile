@@ -12,10 +12,6 @@ gem 'pry'
 gem 'therubyracer'
 gem 'capistrano'
 
-group :test do
-  gem 'sqlite3'
-end
-
 group :development do
   gem 'quiet_assets'
 end
@@ -35,5 +31,6 @@ group :test do
   gem 'simplecov'
   gem 'vcr'
   gem 'webrat'
+  gem 'sqlite3'
 end
 

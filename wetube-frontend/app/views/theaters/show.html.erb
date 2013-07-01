@@ -41,7 +41,6 @@
     player = new YT.Player('video', {
       videoId: findCurrentVideo().data('video-id'),
       playerVars: {
-        autoplay: 1,
         controls: 0,
         modestbranding: 1,
         rel: 0,
@@ -62,21 +61,12 @@
       player.loadVideoById(findCurrentVideo().data('video-id'));    
       $("#slider").slider({ value: 0 });
       clearInterval(interval);
-      $.ajax({
-        url : "http://127.0.0.1:3001/playlist_videos/" + uID,
-        type : "GET"})
     }
     if (event.data === YT.PlayerState.PLAYING) {
       interval = setInterval(increment_slider, 1000);
-      $.ajax({
-        url : "/videos/" + <%= @theater.id %> + "/play",
-        type : "POST"})
     }
     if (event.data === YT.PlayerState.PAUSED) {
       clearInterval(interval);
-      $.ajax({
-        url : "/videos/" + <%= @theater.id %> + "/pause",
-        type : "POST"})
     }
   }
 </script>
