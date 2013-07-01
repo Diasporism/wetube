@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
-gem 'wetube'
+gem 'wetube', :path => '../wetube-gem'
 gem 'hashie'
 gem 'rest-client'
 gem 'faye'
@@ -13,6 +13,10 @@ gem 'therubyracer'
 
 group :test do
   gem 'sqlite3'
+end
+
+group :development do
+  gem 'quiet_assets'
 end
 
 group :development, :production do

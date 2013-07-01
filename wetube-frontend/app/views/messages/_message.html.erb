@@ -1,5 +1,6 @@
 <div class='message'>
   <ul>
+    <li><%= session[:name] %></li>
     <li><%= DateTime.parse(message.created_at).strftime("%H:%M") %></li>
     <li><%= message.content %></li>
   </ul>
