@@ -1,0 +1,1 @@
+puts `god terminate; killall -9 ruby; killall -9 thin`
