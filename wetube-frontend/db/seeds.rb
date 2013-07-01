@@ -1,9 +1,7 @@
 Theater.create([ 
   {name: "James Blake Videos", genre: "Music Videos"},
   {name: "Hilarious Animals", genre: "Music Videos"},
-  {name: "Top Plays of 2013", genre: "Music Videos"},
-  # {name: "Music From James Blakes EPs", genre: "Music Videos"},
-  # {name: "James Blakes DJing Prowess", genre: "Music Videos"}
+  {name: "Top Plays of 2013", genre: "Music Videos"}
 ])
 
 # James Blake Videos

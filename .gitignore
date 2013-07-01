@@ -1,3 +1,4 @@
 wetube-playlist/db/*.sqlite3
 wetube-frontend/db/*.sqlite3
 wetube-chat/db/*.sqlite3
+wetube-frontend/app/assets/images/gifs/
