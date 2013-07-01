@@ -7,6 +7,12 @@
 <%= subscribe_to "/theaters/show/#{@theater.id}" %>
 
 <script type="text/javascript">
+  $(document).ready(function(){
+    setInterval(function(){
+      console.log(findCurrentVideo().data('video-id') + " " + player.getCurrentTime())
+    }, 2000);
+  })
+
   var cache = {};
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
