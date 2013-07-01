@@ -9,8 +9,8 @@ development:
   host: localhost
   database: development_wetube
   pool: 5
-  username: wetube
-  password: wetube
+  username: 
+  password: 
 
 production:
   adapter: postgresql
