@@ -1,7 +1,8 @@
 <div class='message'>
   <ul>
-    <li><%= message.name %></li>
-    <li><%= DateTime.parse(message.created_at).strftime("%H:%M") %></li>
+    <li class='chat-name'><%= message.name %>:</li>
     <li><%= message.content %></li>
+    <br>
+    <br>
   </ul>
 </div>
