@@ -33,7 +33,7 @@ videos2.each do |video_id|
 end
 
 # Top Play Videos
-videos3 = ['uirM5sljfO8', 'gC44nP7ClxM', 'kfQRt1fhVtU', 'ZdwFaWbN_yw', 'OnFWhYHvoWQ']
+videos3 = ['uirM5sljfO8', 'gC44nP7ClxM', '_Jmisv1Spck', 'br2QVozDaA0', 'OnFWhYHvoWQ']
 playlist3 = Theater.find_by_name("Top Plays of 2013").playlist_id
 videos3.each do |video_id|
   meta = Video.fetch_metadata(video_id)

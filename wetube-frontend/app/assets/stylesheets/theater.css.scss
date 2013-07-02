@@ -68,12 +68,13 @@ header {
   position: relative;
   position: absolute;
   display: block;
+  padding-top: 10px;
   top: 0;
   height: 90%;
   width: 100%;
   background-color: #EBF8F1;
   overflow-y: auto;
-  .message:nth-child(odd) { background-color: #b9d2c5};
+  .message:nth-child(even) { background-color: white};
   ul {
     padding: 0px;
     margin: 0px;
