@@ -73,6 +73,7 @@ header {
   width: 100%;
   background-color: #EBF8F1;
   overflow-y: auto;
+  .message:nth-child(odd) { background-color: #b9d2c5};
   ul {
     padding: 0px;
     margin: 0px;
@@ -86,12 +87,12 @@ header {
   position: relative;
   display: block;
   bottom: 0;
-  margin-left: 4%;
+  padding-left: 4%;
   ul {
     list-style-type: none;
   }
   .chat-name {
-    color: blue;
+    color: #6e8177;
     font-weight: bold;
   }
 }
