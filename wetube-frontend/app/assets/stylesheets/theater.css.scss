@@ -121,7 +121,6 @@ header {
 }
 
 #message-text-area {
-  position: relative;
   display: inline-block;
   margin-top: 1%;
   height: 80%;
@@ -289,18 +288,28 @@ header {
   opacity: 1;
 }
 
-#control_play {
+#control_play button {
+  cursor: pointer;
   display: inline-block;
   position: absolute;
-  margin-left: 20px;
-  top: 35%;
+  margin-left: 30px;
+  top: 27%;
   z-index: 5;
+  padding: .6em 1em;
+  &:hover{
+    background: #ebebeb;
+  }
 } 
 
-#control_pause {
+#control_pause button {
+  cursor: pointer;
   display: inline-block;
   position: absolute;
-  margin-left: 35px;
-  top: 35%;
+  margin-left: 85px;
+  top: 27%;
   z-index: 5;
+  padding: .6em 1em;
+  &:hover{
+    background: #ebebeb;
+  }
 }

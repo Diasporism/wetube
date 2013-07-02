@@ -7,7 +7,7 @@
   </form>
 
   <form class='message-form' action="/messages" method="post" data-remote="true">
-    <input type="text" id='message-text-area' rows="3" name="content" placeholder="Chat with users"></textarea>
+    <input type="text" pattern=".{2,}" required="required" id='message-text-area' name="content" placeholder="Chat with users"></textarea>
     <input type="hidden" name="conversation_id" value="<%= @conversation.id %>">
     <input type="hidden" name="name" value="{{ name }}">
     <button id='message-submit-button'>Submit</button>

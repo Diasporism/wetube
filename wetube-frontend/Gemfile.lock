@@ -75,6 +75,8 @@ GEM
     faye-websocket (0.6.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.2.0)
+    font-awesome-rails (3.0.2.0)
+      railties (>= 3.1)
     hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.3)
@@ -198,6 +200,7 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
   faye
+  font-awesome-rails
   hashie
   jquery-rails
   pg
