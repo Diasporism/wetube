@@ -19,4 +19,11 @@ class VideosController < ApplicationController
   def pause
     @theater_id = params[:id]
   end
+
+  def sync
+    @theater_id = params[:id]
+    @video_id = params[:video_id]
+    @time = params[:time]
+    @sync = params[:sync]
+  end
 end

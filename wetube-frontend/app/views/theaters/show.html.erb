@@ -4,13 +4,19 @@
 <%= render "video" %>
 <%= render "controls" %>
 
+<div id="status" data-sync="false"></div>
+<div id="current" data-video-id="none" data-time="none"></div>
 <%= subscribe_to "/theaters/show/#{@theater.id}" %>
 
 <script type="text/javascript">
   $(document).ready(function(){
     setInterval(function(){
-      console.log(findCurrentVideo().data('video-id') + " " + player.getCurrentTime())
-    }, 2000);
+      $.ajax({
+        url: "/videos/" + <%= @theater.id %> + "/sync",
+        type: "POST",
+        data: {"time": player.getCurrentTime(), "video_id": findCurrentVideo().data('video-id'), "sync": currentlySynced()}
+      });
+    }, 1000);
   })
 
   var cache = {};
@@ -21,6 +27,10 @@
 
   function findCurrentVideo() {
     return playlist().children().first();
+  }
+
+  function currentlySynced() {
+    return $("#status").data("sync");
   }
 
   function playlist() {
