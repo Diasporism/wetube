@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619205554) do
+ActiveRecord::Schema.define(:version => 20130702003058) do
 
   create_table "conversations", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -24,13 +24,15 @@ ActiveRecord::Schema.define(:version => 20130619205554) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "conversation_id"
+    t.string   "name"
   end
 
   create_table "playlist_videos", :force => true do |t|
     t.integer  "playlist_id"
     t.integer  "video_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "status",      :default => "queued"
   end
 
   create_table "playlists", :force => true do |t|
