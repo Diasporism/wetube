@@ -3,10 +3,15 @@
 wetube
 ======
 
+visit www.we-tube.us
+
 To install and deploy:
 * Pull down file.
 * gem install god
+* gem install postgres
+* postgres start
 * god -c services.god -D
+
 
 This will run a procfile/god command, starting several local servers and faye through private pub.
 
