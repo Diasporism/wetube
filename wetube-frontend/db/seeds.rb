@@ -19,7 +19,7 @@ videos1.each do |video_id|
 end
 
 # Funny Animal Videos
-videos2 = ['rFTRmjimtCc', 'baqebCZe9Xg', 'D36JUfE1oYk', 'L8fMePzrGVU', '2Tgwrkk-B3k']
+videos2 = ['D36JUfE1oYk', 'baqebCZe9Xg', 'L8fMePzrGVU', 'rFTRmjimtCc', '2Tgwrkk-B3k']
 playlist2 = Theater.find_by_name("Hilarious Animals").playlist_id
 videos2.each do |video_id|
   meta = Video.fetch_metadata(video_id)
