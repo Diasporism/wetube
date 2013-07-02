@@ -1,0 +1,16 @@
+<% if @sync == "true" %>
+  console.log("Subscriber says: sync is true")
+  <% publish_to "/theaters/show/#{@theater_id}" do %>
+    $("#current").data("video-id", "<%=@video_id%>");
+    $("#current").data("time", "<%=@time%>");
+    console.log("Publisher says: "+ $("#current").data("video-id") + " " + $("#current").data("time"))
+  <% end %>
+<% end %>
+
+<% if @sync == "false" %>
+  <% sleep 1 %> 
+  console.log("Subscriber says: sync is false");
+  console.log("Attempting sync to " + $("#current").data("time"));
+  player.seekTo($("#current").data("time"));
+  $("#status").data("sync", true);
+<% end %>

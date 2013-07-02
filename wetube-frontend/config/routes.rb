@@ -6,6 +6,7 @@ WetubeFrontend::Application.routes.draw do
     member do
       post :play
       post :pause
+      post :sync
     end
   end
   post '/name', to: 'messages#name', as: 'name'
