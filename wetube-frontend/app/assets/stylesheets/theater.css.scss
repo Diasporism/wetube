@@ -18,6 +18,10 @@ html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .brand_name {
  font-family: 'SeasideResortNFRegular', cursive; 
 }
