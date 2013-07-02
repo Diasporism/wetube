@@ -1,17 +1,15 @@
 <div id="chat">
 
-  <% if session[:name].nil? %>
-    <div id='messages-container'></div>
-    <form class='name-form' action="/name" method="post" data-remote="true">
-      <input type="text" id='message-name-area' rows="3" name="name" placeholder="Enter your name"></textarea>
-      <button id='name-submit-button'>Submit</button>
-    </form>
-  <% end %>
+  <div id='messages-container'></div>
+
+  <form class='name-form'>
+    <input type="text" ng-model="name" placeholder="Enter Your Name">
+  </form>
 
   <form class='message-form' action="/messages" method="post" data-remote="true">
     <input type="text" id='message-text-area' rows="3" name="content" placeholder="Chat with users"></textarea>
-    <input type="hidden" name="conversation_id" value="<%= @conversation.id %>"></input>
-    <!-- If the theater is private, we'd likely wanna add a require_login hook -->
+    <input type="hidden" name="conversation_id" value="<%= @conversation.id %>">
+    <input type="hidden" name="name" value="{{ name }}">
     <button id='message-submit-button'>Submit</button>
   </form>
 
