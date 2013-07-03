@@ -15,6 +15,8 @@ The graph below depicts our multi-app platform, and how the pieces intersect:
 
 #### Visit WeTube's production site
 
+![WeTube Production](http://i.imgur.com/yJCVdyt.jpg)
+
 Production server is available at [www.we-tube.us](http://www.we-tube.us).
 
 #### Install WeTube locally
