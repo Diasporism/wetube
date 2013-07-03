@@ -8,7 +8,7 @@
 <% end %>
 
 <% if @sync == "false" %>
-  <% sleep 1 %>
+  <% sleep 1 %> 
   if ($("#current").data("video-id") != "none"){
     $.each($('.video'), function(i, v){
       if ($(this).data("video-id") != $("#current").data("video-id")){
@@ -18,9 +18,10 @@
       };
     });
     player.loadVideoById($("#current").data("video-id"));
+      // This last part isn't really working
   };
+  player.seekTo($("#current").data("time"));
   // console.log("Subscriber says: sync is false");
   // console.log("Attempting sync to " + $("#current").data("time"));
-  player.seekTo($("#current").data("time")+2);
   $("#status").data("sync", true);
 <% end %>
